@@ -13,6 +13,14 @@ header {
   background-color: #000;  
  
 }
+.bg-white {
+    background-color: #bdadb2 !important;
+}
+.bg-light {
+    background-color: #44532445 !important;
+}
+
+@media (
 
 /* Sticky footer styles
 -------------------------------------------------- */
