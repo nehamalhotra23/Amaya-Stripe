@@ -49,11 +49,11 @@ namespace Amaya.Controllers
                     Name = model.Name,
                     Address = new AddressOptions
                     {
-                        Line1 = "1234 Main Street",
-                        City = "San Francisco",
-                        State = "CA",
+                        Line1 = model.Line1,
+                        City = model.City,
+                        State = model.State,
                         Country = "US",
-                        PostalCode = "94111",
+                        PostalCode = model.PostalCode,
                     },
                 }
             });

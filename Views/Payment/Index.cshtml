@@ -11,7 +11,6 @@
 <script src="https://js.stripe.com/v3/"></script>
 <script src="https://js.stripe.com//v1/orders"></script>
 <script src="https://js.stripe.com//v1/orders/:id"></script>
-
 <script src="https://js.stripe.com//v1/orders/:id/pay"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -30,22 +29,24 @@
       <input asp-for="Parent" type="hidden" />
 
 
-    <input asp-for="Name" type="text" placeholder="Name on card"  />
-     <input asp-for="OrderId" type="hidden" />
-    <input asp-for="Quantity" type="text" placeholder="Quantity"  />
-    
-   
+    <input asp-for="Name" type="text" placeholder="Name on card"/>
+    <input asp-for="OrderId" type="hidden"/>
+    <input asp-for="Quantity" type="text" placeholder="Quantity"/>
+    <input asp-for="Line1" type="text" placeholder="Line1"/>
+    <input asp-for="State" type="text" placeholder="State"/>
+    <input asp-for="City" type="text" placeholder="City"/>
+    <input asp-for="PostalCode" type="text" placeholder="PostalCode"/>
     </div>
   <div class="input-group mb-2">
-    <span id="card-number" class=form-control></span>
+  <span id="card-number" class=form-control></span>
   </div>
 
  <div class="input-group mb-4">
-    <span id="card-cvc" class=form-control></span>
+  <span id="card-cvc" class=form-control></span>
   </div>
 
 <div class="input-group mb-2">
-    <span id="card-exp" class=form-control></span>
+  <span id="card-exp" class=form-control></span>
   </div>
 </div>
  
