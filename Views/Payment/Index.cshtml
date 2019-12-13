@@ -1,11 +1,9 @@
 @{
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
-
 @using Microsoft.Extensions.Options
 @inject IOptions<StripeSettings> Stripe
 @model Amaya.PayModelView
-
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script src="https://js.stripe.com/v2/"></script>
 <script src="https://js.stripe.com/v3/"></script>
@@ -18,20 +16,16 @@
     ViewData["Title"] = "Payment";
 }
 
-<i style="font-size:24px" class="fa">&#xf1f0;</i>
-<i style="font-size:24px" class="fa fa-cc-mastercard" aria-hidden="true"></i>
-
 <div class="text-center">
   <form asp-action="Charge" asp-asp-controller="Payment" method="post" id="payment-form" >
-    
   <div class="form-group"> 
     <div class="input-group mb-2">
-      <input asp-for="Parent" type="hidden" />
+      <input asp-for="Parent" type="hidden"/>
       <div class="row">
-           <div class="col">
-           <input asp-for="Name" type="text" placeholder="Name on card"/>
-           </div>
-         <div class="col">
+        <div class="col">
+        <input asp-for="Name" type="text" placeholder="Name"/>
+        </div>
+        <div class="col">
     <input asp-for="Quantity" type="text" placeholder="Quantity"/>
     </div>
       <div class="col">
@@ -47,17 +41,16 @@
     <input asp-for="PostalCode" type="text" placeholder="PostalCode"/>
     </div>
     </div>
-   
-    <div class="row">
-   <div class="input-group mb-2">
-      <div class="col">
-    
+    <div class="container">
+      <i class="fa fa-cc-visa" style="color:navy; size: 60px"></i>
+      <i class="fa fa-cc-amex" style="color:blue;"></i>
+      <i class="fa fa-cc-mastercard" style="color:red;"></i>
+      <i class="fa fa-cc-discover" style="color:orange;"></i>
+   <div class="input-group mb-2"> 
     <input asp-for="OrderId" type="hidden"/>
   <span id="card-number" class=form-control></span>
     </div>
-    </div>
-  </div>
- <div class="input-group mb-4">
+<div class="input-group mb-4">
   <span id="card-cvc" class=form-control></span>
   </div>
 <div class="input-group mb-2">
@@ -65,39 +58,65 @@
   </div>
   </div>
 </div>
- 
 <input asp-for="Token" class="StripeToken" type="hidden"/>
 <input asp-for="Email" type="email" placeholder="Email"/>
 
 <button type="submit"  class="btn btn-primary">Pay</button>
+</div>
 </form>
 </div>
-
 <script>
   $(document).ready(function() {
     var stripe = Stripe('pk_test_6zr5xeZ3Wrk3LsUCJuJFeMQy00xzOwmlfn');
     var elements = stripe.elements();
-  
-    var card = elements.create('cardNumber', {
-      'placeholder': 'Card Number'
-      
+      var style = {
+    base: {
+      color: '#fff',
+      fontWeight: 600,
+      fontFamily: 'Quicksand, Open Sans, Segoe UI, sans-serif',
+      fontSize: '16px',
+      fontSmoothing: 'antialiased',
+      ':focus': {
+        color: '#424770',
+      },
+      '::placeholder': {
+        color: '#9BACC8',
+      },
+      ':focus::placeholder': {
+        color: '#CFD7DF',
+      },
+    },
+    invalid: {
+      color: '#fff',
+      ':focus': {
+        color: '#FA755A',
+      },
+      '::placeholder': {
+        color: '#FFCCA5',
+      },
+    },
+  };
+     var card = elements.create('cardNumber', {
+      'placeholder': 'Card Number',
+      'style': style 
     });
     card.mount('#card-number');
-  
-     var cvc = elements.create('cardCvc', {
-      'placeholder': 'CVC'
      
+     var cvc = elements.create('cardCvc', {
+      'placeholder': 'CVC',
+      'style': style 
     });
     cvc.mount('#card-cvc');
     
     var exp = elements.create('cardExpiry', {      
       'placeholder': 'Card Expiry',
+      'style': style 
     });
     exp.mount('#card-exp');
+    
     var form = document.getElementById('payment-form');
     form.addEventListener('submit', function (event) {
       event.preventDefault();
-      
       stripe.createToken(card).then(function(result) {
         if(result.error) {
           var errorElement = document.getElementById('card-errors');
@@ -114,6 +133,4 @@
     form.submit();
   }
   });
-
-
 </script>
