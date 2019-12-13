@@ -71,6 +71,7 @@ namespace Amaya.Controllers
             {
 
                 Currency = "usd",
+                Order = service.ID,
                 Email = model.Email,
                 Items = new List<OrderItemOptions> {
                 new OrderItemOptions {
@@ -98,7 +99,7 @@ namespace Amaya.Controllers
             };
             var servicepay = new OrderService();
             servicepay.Pay(
-              "or_1Fp47BFdC5geAjgF44ULnWwO",
+              service.id,
               optionpay
             );
            

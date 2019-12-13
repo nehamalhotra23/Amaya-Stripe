@@ -10,6 +10,7 @@
 <script src="https://js.stripe.com/v2/"></script>
 <script src="https://js.stripe.com/v3/"></script>
 <script src="https://js.stripe.com//v1/orders"></script>
+<script src="https://js.stripe.com//v1/orders/:id/pay"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 @{
@@ -55,7 +56,7 @@
 
 <script>
   $(document).ready(function() {
-    var stripe = Stripe('');
+    var stripe = Stripe('pk_test_6zr5xeZ3Wrk3LsUCJuJFeMQy00xzOwmlfn');
     var elements = stripe.elements();
   var style = {
     base: {
