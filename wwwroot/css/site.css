@@ -2,6 +2,16 @@
   white-space: normal;
   text-align: center;
   word-break: break-all;
+  float: left;  
+  padding: 15px 15px;  
+  font-size: 40px;  
+  line-height: 20px;  
+  font-family:'Facebook Letter Faces'  ; 
+  border-color: #000; 
+}
+header {
+  background-color: #000;  
+ 
 }
 
 /* Sticky footer styles
