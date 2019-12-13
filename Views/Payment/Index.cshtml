@@ -10,6 +10,8 @@
 <script src="https://js.stripe.com/v2/"></script>
 <script src="https://js.stripe.com/v3/"></script>
 <script src="https://js.stripe.com//v1/orders"></script>
+<script src="https://js.stripe.com//v1/orders/:id"></script>
+
 <script src="https://js.stripe.com//v1/orders/:id/pay"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -29,6 +31,7 @@
 
 
     <input asp-for="Name" type="text" placeholder="Name on card"  />
+     <input asp-for="OrderId" type="hidden" />
     <input asp-for="Quantity" type="text" placeholder="Quantity"  />
     
    
@@ -48,7 +51,6 @@
  
 <input asp-for="Token" class="StripeToken" type="hidden" />
 <input asp-for="Email" type="email" placeholder="Email"/>
- <input asp-for="Amount" placeholder="Amount"/>
 
 <button type="submit"  class="btn btn-primary">Pay</button>
 </form>
