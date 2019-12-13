@@ -1,0 +1,43 @@
+@using Microsoft.Extensions.Options
+@inject IOptions<StripeSettings> Stripe
+@model Amaya.PayModelView
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="https://js.stripe.com//v1/orders"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="text-center">
+  <form asp-action="Index" asp-asp-controller="Payment" method="post" id="quantity-form" >
+
+ 
+<input asp-for="Parent" type="hidden" />
+<input asp-for="City"   />
+<input asp-for="State"   />
+
+<input asp-for="PostalCode"   />
+
+
+
+<input asp-for="Type"  />
+
+
+<button type="submit"  class="btn btn-primary">Pay</button>
+</form>
+</div>
+
+<script>
+  $(document).ready(function() {
+   var form = document.getElementById('quantity-form');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); 
+      
+      
+    });
+  });
+  
+
+
+</script>
+<p>@Html.ActionLink("Shop", "Order", "Payment")</p>
