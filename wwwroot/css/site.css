@@ -19,6 +19,29 @@ header {
 .bg-light {
     background-color: #bdadb2  !important;
 }
+ body {
+      animation: colorchange 50s; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange 50s; /* Chrome and Safari */
+    }
+
+    @keyframes colorchange
+    {
+      0%   {background: #c27d7d;}
+      25%  {background: rgb(196, 196, 115);}
+      50%  {background: rgb(105, 105, 167);}
+      75%  {background: #5c8f5cc4;}
+      100% {background: #97616165;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+       0%   {background: #c27d7d;}
+      25%  {background: rgb(196, 196, 115);}
+      50%  {background: rgb(105, 105, 167);}
+      75%  {background: #5c8f5cc4;}
+      100% {background: #97616165;}
+    }
 
 
 /* Sticky footer styles
