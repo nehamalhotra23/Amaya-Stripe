@@ -13,6 +13,9 @@ header {
   background-color: #000;  
  
 }
+#logo {
+  border-radius: 9px;
+}
 .bg-white {
     background-color: #bdadb2 !important;
 }
