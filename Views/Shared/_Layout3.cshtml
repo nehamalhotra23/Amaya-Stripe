@@ -26,7 +26,6 @@ body, html {
   position: relative;
 }
 
-
 .hero-text {
   text-align: center;
   position: absolute;
@@ -51,10 +50,20 @@ body, html {
   background-color: #555;
   color: white;
 }
+#home {
+  color: white;
+}
 </style>
 </head>
 <body>
+  <nav class="navbar-brand" href="/">
+   
+  </a>
+  
+</nav>
+
 <div class="hero-image responsive" >
+   <img src="https://icon-library.net/images/home-logo-icon/home-logo-icon-0.jpg"  id="home" width="30" height="30" alt="">
   <div class="hero-text">
     <h1 style="font-size:50px">Amaya</h1>
     <p>Organic Lip Balm</p>
@@ -69,6 +78,7 @@ body, html {
   <a asp-action="Index"  asp-controller="Payment"><button >BUY NOW</button></a>
  </div>
 </div>
+
 
 @RenderBody()
 </body>
