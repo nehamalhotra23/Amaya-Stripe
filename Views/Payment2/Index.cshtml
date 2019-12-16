@@ -10,7 +10,7 @@
 <script src="https://js.stripe.com//v1/orders"></script>
 <script src="https://js.stripe.com//v1/orders/:id"></script>
 <script src="https://js.stripe.com//v1/orders/:id/pay"></script>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 @{
     ViewData["Title"] = "Payment";
 }
@@ -41,10 +41,10 @@
     </div>
     </div>
     <div class="container">
-      <i class="fa fa-cc-visa" style="color:navy; size: 60px"></i>
-      <i class="fa fa-cc-amex" style="color:blue;"></i>
+      <i class="fa fa-cc-visa" style="color:navy; "></i>
+      <i class="fa fa-cc-amex" style="color:blue; "></i>
       <i class="fa fa-cc-mastercard" style="color:red;"></i>
-      <i class="fa fa-cc-discover" style="color:orange;"></i>
+      <i class="fa fa-cc-discover" style="color:orange; "></i>
    <div class="input-group mb-2"> 
     <input asp-for="OrderId" type="hidden"/>
   <span id="card-number" class=form-control></span>
@@ -60,7 +60,7 @@
 <input asp-for="Token" class="StripeToken" type="hidden"/>
 <input asp-for="Email" type="email" placeholder="Email"/>
 
-<button type="submit"  class="btn btn-primary">Pay</button>
+<button type="submit"  class="btn btn-primary button">Pay</button>
 </div>
 </form>
 </div>
@@ -103,7 +103,8 @@
      
      var cvc = elements.create('cardCvc', {
       'placeholder': 'CVC',
-      'style': style 
+      'style': style
+      
     });
     cvc.mount('#card-cvc');
     

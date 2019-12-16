@@ -54,20 +54,20 @@ body, html {
 </style>
 </head>
 <body>
-<div class="hero-image">
+<div class="hero-image responsive" >
   <div class="hero-text">
     <h1 style="font-size:50px">Amaya</h1>
     <p>Organic Lip Balm</p>
-    <button>BUY NOW</button>
+   <a asp-action="Index"  asp-controller="Payment2"> <button>BUY NOW</button></a>
   </div>
 </div>
 
-<div class="hero-image2">
+<div class="hero-image2 responsive">
   <div class="hero-text">
-    <h1 style="font-size:50px">Amaya</h1>
-    <p>Organic Lip Balm</p>
-    <button>BUY NOW</button>
-  </div>
+  <h1 style="font-size:50px">Amaya</h1>
+  <p>Organic Lip Balm</p>
+  <a asp-action="Index"  asp-controller="Payment"><button >BUY NOW</button></a>
+ </div>
 </div>
 
 @RenderBody()

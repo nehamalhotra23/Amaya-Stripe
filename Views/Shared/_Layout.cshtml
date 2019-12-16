@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Amaya</title>
     <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     </environment>
@@ -27,21 +28,17 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
+                      <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Index" asp-controller="Payment" asp-action="Index">Shop</a>
-                        </li>
-                    </ul>
-                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Index" asp-controller="Payment2" asp-action="Index">Shop2</a>
+                            <a class="nav-link text-dark" asp-area="Amaya1" asp-controller="Home" asp-action="Amaya1">Products</a>
                         </li>
                     </ul>
                       <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Amaya1" asp-controller="Home" asp-action="Amaya1">Shop2</a>
+                            <a  class="fa fa-instagram" href="https://www.instagram.com/amayabazaar/">Insta</a>
                         </li>
                     </ul>
+                    
                 </div>
             </div>
         </nav>
@@ -56,13 +53,6 @@
             @RenderBody()
         </main>
     </div>
-
-    <!-- <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - Amaya - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer> -->
-
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
