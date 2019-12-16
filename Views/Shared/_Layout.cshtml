@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Amaya</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet">
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     </environment>
@@ -21,7 +21,6 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <img id="logo" src="img/logo.jpeg" height="50px" />
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Amaya</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -30,19 +29,30 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Product" asp-controller="Home" asp-action="Product">Product</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="Index" asp-controller="Payment" asp-action="Index">Shop</a>
+                        </li>
+                    </ul>
+                     <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Index" asp-controller="Payment2" asp-action="Index">Shop2</a>
+                        </li>
+                    </ul>
+                      <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Amaya1" asp-controller="Home" asp-action="Amaya1">Shop2</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+         <img id="img1" src="img/adv.jpg" class="responsive">
+<img id="img2" src="img/balm.jpg" class="responsive">
+<img id="img3" src="img/balm2.jpg" class="responsive">
     <div class="container">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">
+       
             @RenderBody()
         </main>
     </div>

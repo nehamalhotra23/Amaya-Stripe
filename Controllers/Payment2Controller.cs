@@ -1,4 +1,3 @@
-//Ammaya Chapstick
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,7 +11,7 @@ using Stripe;
 
 namespace Amaya.Controllers
 {
-    public class PaymentController : Controller
+    public class Payment2Controller : Controller
     {
         public IActionResult Index()
         {
@@ -41,7 +40,7 @@ namespace Amaya.Controllers
                 Items = new List<OrderItemOptions> {
                 new OrderItemOptions {
                 Type = model.Type,
-                Parent = "sku_GLdbjkfZychwTo",
+                Parent = "sku_GN6QFIKOrrky6Q",
                 Quantity = model.Quantity,
         },
     },
@@ -67,9 +66,6 @@ namespace Amaya.Controllers
               options.Id,
               optionpay
             );
-
-            service.Get(options.Id);
-
             return View();
         }
 
@@ -78,8 +74,3 @@ namespace Amaya.Controllers
     }
 
 }
-
-
-
-
-

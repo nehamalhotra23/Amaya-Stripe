@@ -21,10 +21,12 @@ namespace Amaya.Controllers
         {
             return View();
         }
-        public IActionResult Product()
+        public IActionResult Amaya1()
         {
             return View();
         }
-        
+
+
+
     }
 }
