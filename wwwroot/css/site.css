@@ -13,6 +13,9 @@ header {
   background-color: #000;  
  
 }
+h1{
+  margin-right: 300px;
+}
 #logo {
   border-radius: 9px;
 }
@@ -76,20 +79,20 @@ body {
         position:fixed;
         z-index:-1;
         animation-name: test;
-        animation-duration: 50s;
+        animation-duration: 100s;
         opacity:0;
     }
     #img2 {
         animation-delay:5s;
-        -webkit-animation-delay:1s
+        -webkit-animation-delay:0s
     }
     #img3 {
         animation-delay:10s;
-        -webkit-animation-delay:1s
+        -webkit-animation-delay:0s
     }
     #img4 {
         animation-delay:15s;
-        -webkit-animation-delay:1s
+        -webkit-animation-delay:0s
     }
     .animated {
         -webkit-animation-fill-mode: both;
