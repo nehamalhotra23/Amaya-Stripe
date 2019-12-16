@@ -18,9 +18,9 @@
 <div class="text-center">
   <form asp-action="Charge" asp-asp-controller="Payment" method="post" id="payment-form" >
   <div class="form-group"> 
-    <div class="input-group mb-2">
+    <div class="input-group mb-2" >
       <input asp-for="Parent" type="hidden"/>
-      <div class="row">
+      <div class="row" id="info">
         <div class="col">
         <input asp-for="Name" type="text" placeholder="Name"/>
         </div>
