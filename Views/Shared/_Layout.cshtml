@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Amaya</title>
-    <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet">
+    @* <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet"> *@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -18,7 +18,7 @@
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -30,7 +30,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                       <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Amaya1" asp-controller="Home" asp-action="Amaya1">Products</a>
+                            <a class="nav-link" asp-area="Amaya1" asp-controller="Home" asp-action="Amaya1">Products</a>
                         </li>
                     </ul>
                       <ul class="navbar-nav flex-grow-1">
@@ -43,11 +43,38 @@
             </div>
         </nav>
     </header>
-<img  id="img1" src="img/adv.jpg" class="responsive">
-<img id="img2" src="img/balm.jpg" class="responsive">
-<img id="img3" src="img/balm2.jpg" class="responsive">
-<img id="img4" src="img/logo.jpg" class="responsive">
+<body>
+<div id="animated-bg">
+    <div id="texttop">
+    <h1>Happy Heathy Organic</h1>
+        <p>A repeating sequence of fullscreen background images, pushed all the way to the root element. Crossfading effect in Webkit-derived browsers (Chrome, Safari, Opera).</p>
+  </div>
+</div>
+<script>
+var bgImageArray = [ "476", "932"],
+base = "https://picsum.photos/1200/800?image=",
+secs = 4;
+bgImageArray.forEach(function(img){
+    new Image().src = base + img; 
+    // caches images, avoiding white flash between background replacements
+});
 
+function backgroundSequence() {
+    window.clearTimeout();
+    var k = 0;
+    for (i = 0; i < bgImageArray.length; i++) {
+        setTimeout(function(){ 
+            document.getElementById('animated-bg').style.background = "url(" + base + bgImageArray[k] + ") no-repeat center center";
+            document.getElementById('animated-bg').style.backgroundSize ="cover";
+        if ((k + 1) === bgImageArray.length) { setTimeout(function() { backgroundSequence() }, (secs * 1000))} else { k++; }            
+        }, (secs * 1000) * i)   
+    }
+}
+backgroundSequence();
+
+
+Resources
+</script>
 
     <div class="container">
         <partial name="_CookieConsentPartial" />
