@@ -22,9 +22,9 @@
   
   <form asp-action="Charge" asp-asp-controller="Payment" method="post" id="payment-form" >
   <div class="form-group" class="form-control"> 
-    <div class="input-group mb-2" id="main-Input">
+    <div id="main-Input">
       <input asp-for="Parent" type="hidden"/>
-      <div class="row" id="info">
+      <div class="row container" id="info">
         <div class="col">
         <input asp-for="Name" type="text" placeholder="Name"/>
         </div>
@@ -42,9 +42,10 @@
     </div>
     <div class="col">
     <input asp-for="PostalCode" type="text" placeholder="PostalCode"/>
+    <input asp-for="Email" type="email" placeholder="Email"/>
     </div>
     </div>
-    <div class="container">
+        <div class="container">
        <i class="fa fa-cc-visa" style="color:navy; size: 60px"></i>
       <i class="fa fa-cc-amex" style="color:blue;"></i>
       <i class="fa fa-cc-mastercard" style="color:red;"></i>
@@ -63,8 +64,6 @@
   </div>
 </div>
 <input asp-for="Token" class="StripeToken" type="hidden"/>
-<input asp-for="Email" type="email" placeholder="Email"/>
-
 <button type="submit"  class="btn btn-primary button">Pay</button>
 </div>
 </form>
