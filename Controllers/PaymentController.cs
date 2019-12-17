@@ -68,13 +68,6 @@ namespace Amaya.Controllers
               optionpay
             );
 
-            // var invoice = new InvoiceCreateOptions
-            // {
-            //     Customer = customer.Id,
-            // };
-            // var serviceInvoice = new InvoiceService();
-            // serviceInvoice.Create(invoice);
-
             return View();
         }
 
