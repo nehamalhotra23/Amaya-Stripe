@@ -13,7 +13,6 @@ namespace Amaya
         public int Amount { get; set; }
         public string Email { get; set; }
         public string Type { get; set; }
-
         public List<OrderItemOptions> Items { get; set; }
         public int OrderId {get; set;}
         public string Parent { get; set; }
@@ -23,7 +22,6 @@ namespace Amaya
         public string City { get; set; }
         public string State { get; set; }
         public string Country { get; set; }
-
         public int Quantity { get; set; } = 2;
         public string PostalCode { get; set; }
 
