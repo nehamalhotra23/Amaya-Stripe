@@ -28,7 +28,7 @@
     <input asp-for="Quantity" type="text" placeholder="Quantity"/>
     </div>
       <div class="col">
-    <input asp-for="Line1" type="text" placeholder="Line1"/>
+    <input asp-for="Line1" type="text" placeholder="Address"/>
     </div>
      <div class="col">
     <input asp-for="City" type="text" placeholder="City"/>
@@ -36,8 +36,8 @@
      <div class="col">
     <input asp-for="State" type="text" placeholder="State"/>
     </div>
-    <div class="col">
-    <input asp-for="PostalCode" type="text" placeholder="PostalCode"/> 
+    <div class="col Postal">
+    <input asp-for="PostalCode" type="text" placeholder="Postal Code"/> 
   <input asp-for="Email" type="email" placeholder="Email"/>
   </div>
      
@@ -62,7 +62,7 @@
   </div>
 </div>
 <input asp-for="Token" class="StripeToken" type="hidden"/>
-<button type="submit"  class="btn btn-primary button">Pay</button>
+<button type="submit"  class=" button">Pay</button>
 </div>
 </form>
 </div>
