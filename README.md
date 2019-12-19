@@ -6,7 +6,7 @@
 
 ## Description
 
-_This mvc application allow users to shop online._
+_This mvc application allow users to shop online. Users can select particular product they want to order, quantity of the product and make payment for their orders._
 
 ## Features 
 
@@ -16,26 +16,9 @@ _This mvc application allow users to shop online._
 ## Setup/Installation Requirements
 
 * _Git Clone https://github.com/nehamalhotra23/Amaya-Stripe.git_
-* _Add appsettings.json file in the root directory
-
-{
-    "ConnectionStrings": {
-          "DefaultConnection": "Server=localhost;Port= ;database="Name";uid=root;pwd=" ";"
-      },
-    "Logging": {
-      "LogLevel": {
-        "Default": "Warning"
-      }
-    },
-    "Stripe": {
-      "SecretKey": "stripe secret key",
-      "PublishableKey": "stripe publishable key"
-    },
-    "AllowedHosts": "*"
-  }_
+* _Add appsettings.json file in the root directory with Stripes secret key and publishable key_
 * _Run "Dotnet Restore" in terminal_
 * _Run "Dotnet Build" in terminal and navigate to localhost_
-
 
 ## Known Bugs
 
