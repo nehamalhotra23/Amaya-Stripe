@@ -2,13 +2,13 @@
 
 #### _Amaya, 17-12-2019_
 
-#### By _**Neha Malhotra**_
+#### By _Neha Malhotra_
 
 ## Description
 
 _This mvc application allow users to shop online. Users can select particular product they want to order, quantity of the product and make payment for their orders._
 
-## Features 
+## Features
 
 * _Users can see the product,  ingredients._
 * _User Can Shop Online, make payments and select quantity of product._
